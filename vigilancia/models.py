@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.utils.text import slugify
 class Estacion(models.Model):
     nombre = models.CharField(max_length=100)
     direccion = models.TextField()

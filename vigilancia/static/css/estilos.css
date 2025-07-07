@@ -61,7 +61,7 @@ select.form-select {
 
 /* Títulos */
 h2 {
-    color: #007bff;
+    color: #060606;
     text-align: center;
     margin-bottom: 30px;
 }
@@ -69,9 +69,18 @@ h2 {
 /* Botones (por ejemplo, si tienes botones para otros filtros) */
 .btn {
     padding: 8px 20px;
-    background-color: #007bff;
-    border-color: #007bff;
-    color: white;
+   
+}
+
+.btn-success {
+    background-color: #1e8932 !important;  /* azul oscuro */
+    border-color: #27731d !important;
+    color: white !important;
+}
+
+.btn-success:hover {
+    background-color: #1b6f17 !important;
+    border-color: #447b1a !important;
 }
 
 /* Estilo para el header (cabecera) */
@@ -126,3 +135,4 @@ body {
 .mt-5 {
     margin-top: 30px;
 }
+
