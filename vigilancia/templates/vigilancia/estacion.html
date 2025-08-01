@@ -63,12 +63,14 @@
     </table>
 </div>
 <script>
-    function cambiarEstacion(select) {
-        const estacionId = select.value;
-        const semana = document.getElementById("semanaSelect").value;
-        const url = semana ? `/estacion/${estacionId}/?semana=${semana}` : `/estacion/${estacionId}/`;
-        window.location.href = url;
-    }
+function cambiarEstacion(select) {
+    const estacionId = select.value;
+    const semana = document.getElementById("semanaSelect").value;
+    const baseUrlTemplate = "{% url 'vigilancia:estacion' estacion_id=0 %}";
+    const baseUrl = baseUrlTemplate.replace('/0/', `/${estacionId}/`);
+    const url = semana ? `${baseUrl}?semana=${encodeURIComponent(semana)}` : baseUrl;
+    window.location.href = url;
+}
 </script>
 
 {% endblock %}
